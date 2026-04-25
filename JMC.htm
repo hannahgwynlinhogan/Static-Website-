@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎<meta charset="UTF-8">
+‎<meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎<title>Enjoy Your Dream Rental Car</title>
+‎<style>
+‎/* ---- Reset ---- */
+‎* { margin: 0; padding: 0; box-sizing: border-box; }
+‎
+‎/* ---- Body & Font ---- */
+‎body {
+‎    font-family: 'Montserrat', sans-serif;
+‎    background-color: #0d0d0d;
+‎    color: #fff;
+‎    overflow-x: hidden;
+‎}
+‎
+‎/* ---- Header ---- */
+‎.header {
+‎    text-align: center;
+‎    padding: 25px 0;
+‎    font-size: 40px;
+‎    font-weight: 900;
+‎    color: #FFD700;
+‎    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+‎}
+‎
+‎/* ---- Navbar ---- */
+‎.navbar {
+‎    display: flex;
+‎    justify-content: center;
+‎    gap: 30px;
+‎    padding: 15px;
+‎    background: #1a1a1a;
+‎    border-bottom: 2px solid #FFD700;
+‎}
+‎.navbar button {
+‎    background: transparent;
+‎    border: 2px solid #FFD700;
+‎    color: #FFD700;
+‎    padding: 12px 25px;
+‎    border-radius: 30px;
+‎    font-weight: 700;
+‎    cursor: pointer;
+‎    transition: all 0.4s ease;
+‎}
+‎.navbar button:hover {
+‎    background: #800020;
+‎    color: #FFD700;
+‎    transform: scale(1.1);
+‎}
+‎
+‎/* ---- Hero Section ---- */
+‎.hero {
+‎    height: 90vh;
+‎    display: flex;
+‎    flex-direction: column;
+‎    align-items: center;
+‎    justify-content: center;
+‎    text-align: center;
+‎    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+‎                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+‎    background-size: cover;
+‎    background-position: center;
+‎    color: #FFD700;
+‎}
+‎.hero h1 {
+‎    font-size: 60px;
+‎    font-weight: 900;
+‎    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+‎    margin-bottom: 20px;
+‎}
+‎.hero p {
+‎    font-size: 22px;
+‎    color: #e6c200;
+‎    margin-bottom: 30px;
+‎    font-weight: 500;
+‎    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+‎}
+‎.hero .button {
+‎    font-size: 18px;
+‎    padding: 15px 30px;
+‎    border-radius: 35px;
+‎    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+‎}
+‎
+‎/* ---- Vehicles Section ---- */
+‎.vehicles {
+‎    padding: 60px 20px;
+‎    text-align: center;
+‎    background-color: #111111;
+‎}
+‎.vehicles h2 {
+‎    font-size: 40px;
+‎    color: #FFD700;
+‎    margin-bottom: 40px;
+‎}
+‎.vehicle-container {
+‎    display: grid;
+‎    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+‎    gap: 25px;
+‎    justify-items: center;
+‎}
+‎.vehicle-card {
+‎    background: #1a1a1a;
+‎    border: 2px solid #FFD700;
+‎    border-radius: 20px;
+‎    overflow: hidden;
+‎    width: 280px;
+‎    transition: transform 0.5s, box-shadow 0.5s;
+‎}
+‎.vehicle-card:hover {
+‎    transform: translateY(-10px) scale(1.05);
+‎    box-shadow: 0 0 25px #FFD700;
+‎}
+‎.vehicle-card video {
+‎    width: 100%;
+‎    height: 180px;
+‎    object-fit: cover;
+‎}
+‎.vehicle-card h3 {
+‎    color: #FFD700;
+‎    font-size: 20px;
+‎    margin: 15px 0 5px 0;
+‎}
+‎.vehicle-card p {
+‎    color: #e6c200;
+‎    font-size: 16px;
+‎    margin-bottom: 15px;
+‎}
+‎.vehicle-card .button {
+‎    margin-bottom: 15px;
+‎}
+‎
+‎/* ---- Customer Info Section ---- */
+‎.customer-section {
+‎    max-width: 800px;
+‎    margin: 60px auto;
+‎    padding: 40px;
+‎    background: #111;
+‎    border: 2px solid #FFD700;
+‎    border-radius: 25px;
+‎    box-shadow: 0 0 25px rgba(212,175,55,0.5);
+‎    transition: all 0.5s ease;
+‎}
+‎.customer-section h2 {
+‎    color: #FFD700;
+‎    font-size: 32px;
+‎    margin-bottom: 30px;
+‎    text-align: center;
+‎}
+‎.customer-section label {
+‎    display: block;
+‎    color: #ffd700;
+‎    font-weight: 600;
+‎    margin-bottom: 8px;
+‎    font-size: 16px;
+‎}
+‎.customer-section input {
+‎    width: 100%;
+‎    padding: 12px;
+‎    margin-bottom: 20px;
+‎    border-radius: 10px;
+‎    border: 2px solid #FFD700;
+‎    background: #000;
+‎    color: #fff;
+‎    font-size: 16px;
+‎    transition: 0.3s;
+‎}
+‎.customer-section input:focus {
+‎    border-color: #800020;
+‎    box-shadow: 0 0 15px rgba(212,175,55,0.5);
+‎    outline: none;
+‎}
+‎.customer-section .button {
+‎    background: #FFD700;
+‎    border: none;
+‎    padding: 12px 24px;
+‎    border-radius: 12px;
+‎    color: #000;
+‎    font-weight: bold;
+‎    cursor: pointer;
+‎    transition: 0.3s;
+‎}
+‎.customer-section .button:hover {
+‎    background: #fff;
+‎}
+‎
+‎/* Highlight animation for customer info */
+‎.highlight {
+‎    animation: glow 1s ease-in-out 3;
+‎    border-color: #FF4500 !important;
+‎}
+‎@keyframes glow {
+‎    0% { box-shadow: 0 0 0 #FF4500; }
+‎    50% { box-shadow: 0 0 15px #FF4500; }
+‎    100% { box-shadow: 0 0 0 #FF4500; }
+‎}
+‎
+‎/* ---- Info & Contact & Admin ---- */
+‎.info-box, .contact-box, .admin-box {
+‎    max-width: 700px;
+‎    margin: 20px auto;
+‎    padding: 20px;
+‎    background: #111;
+‎    border: 2px solid #FFD700;
+‎    border-radius: 15px;
+‎}
+‎.info-box p, .contact-box p {
+‎    color: #e6c200;
+‎    margin-bottom: 10px;
+‎}
+‎.contact-box button, .admin-box button {
+‎    margin-top: 10px;
+‎}
+‎.admin-box table {
+‎    width: 100%;
+‎    border-collapse: collapse;
+‎    margin-top: 15px;
+‎}
